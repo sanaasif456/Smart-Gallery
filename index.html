@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Smart Photo Gallery</h1>
+    <p>Explore, search and like your favorite photos</p>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search photos..."
+        aria-label="Search photos"
+      >
+
+      <select id="categoryFilter" arial-label="Filter by category">
+        <option value="all">All Categories</option>
+        <option value="nature">Nature</option>
+        <option value="animals">Animals</option>
+        <option value="architecture">Architecture</option>
+        <option value="travel">Travel</option>
+      </select>
+
+      <button id="locationBtn" type="button">
+        Show My Location
+      </button>
+    </section>
+
+    <p id="locationResult" aria-live="polite">
+      Your location has not been requested
+    </p>
+
+    <p id="photoCount" aria-live="polite">Loading photos...</p>
+
+    <section
+      id="gallery"
+      class="gallery"
+      aria-label="Photo gallery"
+    ></section>
+
+    <p id="emptyMessage" hidden>No photos found.</p>
+
+    <div id="sentinel" aria-hidden="true"></div>
+
+    <p id="loadingMessage" aria-live="polite">Loading photos...</p>
+  </main>
+  <script type="module" src="./JS/main.js"></script>
+</body>
+</html>
